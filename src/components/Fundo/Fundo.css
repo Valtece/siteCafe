@@ -84,3 +84,10 @@ h1 {
   font-size: 0.625rem;
   font-weight: 600;
 }
+
+.sold-out {
+  font-family: "DM Sans", sans-serif;
+  color: #ED735D;
+  font-size: 0.875rem;
+  font-weight: 600;
+}

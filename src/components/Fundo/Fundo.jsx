@@ -50,7 +50,7 @@ export default function Fundo(){
         </div>
         <ul className=' d-flex flex-row justify-content-center p-0 mt-5 row row-cols-1 row-cols-md-2 g-0 '>
           {coffees.map(coffee => (
-            <li className="card m-4 bg-transparent position-relative" style={{ width: '18rem' }} key={coffee.id}>
+            <li className="card m-4 border-0 bg-transparent position-relative" style={{ width: '18rem' }} key={coffee.id}>
               {coffee.popular === true ? 
                 <div className='position-absolute popular-custom py-1 px-2 m-2 rounded-4'>
                   <p className='m-0'>Popular</p>
@@ -67,6 +67,9 @@ export default function Fundo(){
                 <img src={coffee.rating === null ? star : StarFill} alt="Rating Star" />
                 <p className='color-rating m-0 mx-1'> {coffee.rating} </p>
                 <p className='color-votes m-0'> {coffee.votes ? '(' + coffee.votes + ' votes)' : 'No ratings'} </p>
+                {coffee.available === true ? 
+                  '' : 
+                  <p className='m-0 sold-out'>Sold Out</p> } 
               </div>
             </li>
           ))}
